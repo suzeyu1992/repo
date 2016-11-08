@@ -2,12 +2,12 @@
 >   这些应该可以让你对Git的使用更进一步  ^*^
 
 
-* [安装Git](#安装Git)
+* [安装Git](#安装git)
 * [配置文件](#配置文件)
     * [查看config](#查看config)
     * [设置用户信息](#设置用户信息)
-    * [Git别名](#Git别名)
-    * [.gitignore文件](#.gitignore文件)
+    * [Git别名](#git别名)
+    * [.gitignore文件](#gitignore文件)
 * [仓库的基础操作](#仓库的基础操作)
     * [初始化仓库](#初始化仓库)
     * [添加文件到暂存区](#添加文件到暂存区)
@@ -37,7 +37,7 @@
 
 
 
-<span id = "安装Git"></span>
+<span id = "#安装Git"></span>
 ## 安装Git
 
 **Linux**
@@ -126,7 +126,7 @@ $ git config --global alias.ci commit
 $ git config --global alias.st status
 ```
 
-<span id = ".gitignore文件"></span>
+<span id = "gitignore文件"></span>
 ### .gitignore文件
 
 对于自动生成的文件, 日志, 编译的临时文件等. 可以对其进行配置, 让git不追踪这些文件
