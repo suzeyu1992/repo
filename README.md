@@ -407,7 +407,7 @@ $ git commit -m "版本1.5开发代码"
 
 # 正当你松了一口气的时候发现配置文件忘记修改了, 你赶紧修改,并适合用add到暂存区
 $ git add project.property
-$ git commit -amend         
+$ git commit --amend         
 # 你会神奇的发现你没有增加任何多余的操作就把漏掉的文件补齐到最后一次提交中
 ```
 ---
