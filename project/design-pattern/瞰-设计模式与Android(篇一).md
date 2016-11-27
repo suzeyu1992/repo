@@ -25,7 +25,7 @@
 
 可以看如下一个稍微完整的一个`UML类图`
 
- ![](/imgs/UML_ALL.png)
+ ![](imgs/UML_ALL.png)
 
 ---
 
@@ -159,7 +159,7 @@ class ContextImpl extends Context {
    
    范例的UML类图
    
-   ![](/imgs/UML_Builder.png)
+   ![](imgs/UML_Builder.png)
    
    上例中通过具体`MacbookBuilder`类构建`Macbook`对象, 而`Director`封装了构建复杂产品对象的过程, 对外隐藏了构建的细节. `Builder`于`Director`一起将一个复杂对象的构建与它的表示分离, 是的同样的构建过程可以创建不同的对象.
    
@@ -312,7 +312,7 @@ public void installContent() {
 
 **UML类图**
 
-![](UML_Prototype.png)
+![](imgs/UML_Prototype.png)
 
 #### 模式范例
 
@@ -512,7 +512,7 @@ public Intent(Intent o) {
  
  这是范例的UML类图.
  
- ![](/imgs/UML_Factory.png)
+ ![](imgs/UML_Factory.png)
  
  其实这里, 可以去掉抽象的工厂类, 只需要一个工厂即可.  这样会更加简洁直观.
  
@@ -651,11 +651,11 @@ public class MainActivity extends Activity {
 
 范例UML图
 
-![](UML_AbsFactory.png)
+![](imgs/UML_AbsFactory.png)
 
 看一下运行结果: 
 
-![](test_absFactory.png)
+![](imgs/test_absFactory.png)
 
 如果这是时候, 如果想创建一种使用`普通轮胎`, `新款发动机`的车型. 只需要继承抽象工厂, 并使用原有的普通轮胎类, 并继承`IEngfine`实现一款新的发动机类. 即可完成扩展. 这就是通过接口扩展. 
 
@@ -694,7 +694,7 @@ public class MainActivity extends Activity {
 
 范例类图:
 
-![](UML_Strategy.png) 
+![](imgs/UML_Strategy.png) 
 
 在看一下代码的使用以及结果-->
 
@@ -725,7 +725,7 @@ public static void main (String arg[]){
 
 看一下大概的类图
 
-![](UML_Animation.png)
+![](imgs/UML_Animation.png)
 
 * 动画中的`TimeInterpolator`时间插值器, 它的作用是根据时间流逝的百分比计算出当前属性值改变的百分比, 内置的插值器有如下几种
     *  `线性插值器(LinearInterpolator)`用于匀速动画
