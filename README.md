@@ -15,9 +15,11 @@
         * [Android绘图篇-01 Canvas和Paint的基础使用](http://szysky.com/2016/07/05/Android-%E7%BB%98%E5%9B%BE%E7%AF%87-1-Canvas%E5%92%8CPaint%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/)
     * **`framework`**
 * **`Java`**
+* **`Git`**
+    * [git命令小手册](https://github.com/suzeyu1992/repo/tree/master/project/git) 
 * **`数据结构`**
 * **`设计模式`**
-    * [设计模式与Android(篇一)](https://github.com/suzeyu1992/repo/blob/master/project/design-pattern/%E7%9E%B0-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8EAndroid(%E7%AF%87%E4%B8%80).md)  
+    * [设计模式与Android(篇一)](https://github.com/suzeyu1992/repo/tree/master/project/design-pattern/%E7%9E%B0-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8EAndroid(%E7%AF%87%E4%B8%80))  
 * **`mySql`**
     * [MySQL(一)--数据库入门](http://szysky.com/2016/05/15/MySQL-%E4%B8%80-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%85%A5%E9%97%A8/) 
     * [MySQL(二)--基本查询语句](http://szysky.com/2016/05/16/MySQL-%E4%BA%8C-%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/)
