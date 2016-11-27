@@ -96,22 +96,18 @@
 > 编程是门技术, 更加是一门艺术, 不能只满足代码结果运行正确就完事, 时常考虑如果让代码更加简练, 更加容易维护, 更易扩展和复用, 这样才可以真正提高. 
 
 <span id = "3"></span>
-
 ## 发现之路 - 23种设计模式
 
 <span id = "4"></span>
-
 ### 单例模式 Singleton
 
 <span id = "5"></span>
-
 #### 模式介绍
 
 * `定义`: 确保某个类只有一个实例, 而且自行实例化并向整个系统提供这个实例.
 * `场景`: 确保一个类只会有一个对象实例, 避免产生多个对象消耗过多的资源, 或者某种类型的对象只应该有且只有一个. 如创建一个对象需要消耗的资源过多, 访问IO和数据库等资源时就可以考虑单例. 
 
 <span id = "6"></span>
-
 #### 模式范例
 
 单例模式的实现有5种. 
@@ -141,7 +137,6 @@ private Object readResolve() throws ObjectStreamException(){
 这样在反序列化的时候就不是默认的重新生成一个新对象. 而对于枚举,并不存在这个问题. 因为即使反序列化它也不会重新生成新的实例.
 
 <span id = "7"></span>
-
 #### Android源码对应模式
 
 
@@ -196,10 +191,9 @@ class ContextImpl extends Context {
 
 
 <span id = "8"></span>
-
 ### 建造者模式 Builder
-<span id = "9"></span>
 
+<span id = "9"></span>
 #### 模式介绍
 
 > 一个复杂的对象有很多组成成分, 如汽车, 车轮, 方向盘, 发动机,等等. 为了在构建过程中对外部隐藏实现细节, 就可以使用`Builder`模式将部件和组装过程分离, 使得构建过程和部件都可以自由扩展, 两者之间的耦合也将到了最低.
@@ -209,8 +203,8 @@ class ContextImpl extends Context {
     1. 当初始化一个队形特别复杂, 参数特别多, 且有很多参数都具有默认值时. 
     2. 相同的方法, 不同的执行顺序, 产生不同的事件结果时
     3. 多个部件或零件, 都可以装配到一个对象中, 但是产生的运行结果又不相同.
-  <span id = "10"></span>
-  
+    
+<span id = "10"></span> 
 #### 模式范例
    
    [范例代码](https://github.com/suzeyu1992/AlgorithmTraining/tree/master/src/design/builder) 
@@ -223,8 +217,7 @@ class ContextImpl extends Context {
    
    可能你会觉得`唉? 怎么和我见过的Builder模式不一样呢?` ,这是因为`Director`这个角色经常会被忽略. 而直接使用一个`Builder`来进行对象的封装, 并且这个`Builder`通常为**链式调用**, 它的每个`setter`方法都会返回`this`自身, 比如我们常用的`AlertDialog`. 下节介绍.
    
-   <span id = "11"></span>
-
+<span id = "11"></span>
 #### Android源码模式实现
 
 在Android中最经典的`Builder`实现就是`AlertDialog`. 看一下开发中的使用:
@@ -350,17 +343,14 @@ public void installContent() {
 可以看到`Android源码中的AlertDialog`并没有遵循`GOF设计模式`中经典的实现方式, 而是进行了变种, 但却使其使用更加的方便. 这里`AlertDialog.Builder`这个类同时扮演了范例中的`builder`,`具体实现builder`,`Director`的角色. 简化了`Builder`设计模式, 因为模块比较稳定不会存在变化, 根据具体场景简化模式, 正是体现了灵活运用设计模式的实例.
 
 <span id = "12"></span>
-
 #### 实战场景
 
 就如`Picasso`,`Glide`等链式的调用, 你可以通过链式设置很多配置属性, 也可以仅调用两三此传入必要参数即可. 是的调用实现更加灵活. 
 
 <span id = "13"></span>
-
 ### 原型模式 Prototype
 
 <span id = "14"></span>
-
 #### 模式介绍
 
 > **创建性**模式, 从一个样板对象中复制出一个内部属性一致的对象, 其实就是**克隆**. 而被复制的对象就叫做**原型**, 多用于创建复杂的或者构造耗时的实例
@@ -378,7 +368,6 @@ public void installContent() {
 ![](imgs/UML_Prototype.png)
 
 <span id = "15"></span>
-
 #### 模式范例
 
 这里模式实现很简单, 实现也比较少, 这里就贴出代码
@@ -462,7 +451,6 @@ protected WordDocument clone() {
 
 
 <span id = "16"></span>
-
 #### Android源码对应实现
 
 上面我们说了通过对集合再次调用`clone()`即可完成深拷贝. 那么看一下`ArrayList`源码
@@ -551,7 +539,6 @@ public Intent(Intent o) {
 
 
 <span id = "17"></span>
-
 #### 实战场景
 
 当登录模块登录成功之后, 会把一些个人信息,token等信息在保存类中的某个数据结构上, 并通过一个方法对外暴露出去, 提供其他模块使用.  但是如果你返回的是一个数据结构也就是一个对象, 这个对象包含了很多个人信息,  但是正常来说, 对于外部应该只提供查看数据的能力, 不应该提供修改的能力. 
@@ -563,11 +550,9 @@ public Intent(Intent o) {
 `原型模式`是通过内存中二进制流的方式拷贝, 要比直接通过`new`一个对象性能更好, 特别是循环体内产生大量对象是.  但是注意, 因为是`二进制流的拷贝`, 所以构造函数是不会执行的. 这点要明确记牢.
 
 <span id = "18"></span>
-
 ### 工厂方法模式 Factory
 
 <span id = "19"></span>
-
 #### 模式介绍
 
 > 创建型设计模式, 其实这个模式可能在开发中出现很多回了, 只是并不了解什么是工厂模式的概念. 
@@ -578,7 +563,6 @@ public Intent(Intent o) {
 工厂方法模式完全符合设计模式原则, 降低了对象之间的耦合度, 而且, 工厂方法模式依赖于抽象的架构, 将实例化的任务交由了子类实现.
 
 <span id = "20"></span>
-
 #### 模式范例
 
  [实现代码](https://github.com/suzeyu1992/AlgorithmTraining/tree/master/src/design/factory)
@@ -589,8 +573,7 @@ public Intent(Intent o) {
  
  其实这里, 可以去掉抽象的工厂类, 只需要一个工厂即可.  这样会更加简洁直观.
  
- <span id = "21"></span>
-
+<span id = "21"></span>
 #### Android源码对应实现
  
 `List`和`Set`不陌生, 都继承`Collection`接口, 而`Collection`接口继承`Iterable`接口, 而这个接口很简单就一个`iterator()`方法, 如下
@@ -705,7 +688,6 @@ public class MainActivity extends Activity {
 通过`onCreate()`这个方法, 我们可以构建出任何样式的根布局, 如`LinearLayout`,`TextView`等等. 我们在不同的`Activity#onCreate()`方法将设置的布局通过`setContentView()`函数传递给`frameworks`并显示出来. 这不就是一个工厂模式的结构. 方法内部可以创建不同的对象, 产生不同的实例.
 
 <span id = "22"></span>
-
 #### 实战场景
 
 例如对数据的持久化, 可以通过的途径有`SP`,`File`,`SQLite`等. 但是对数据的操作无非就是`增删改查`, 那么我们可以抽象一个抽象类并定义CURD抽象方法. `SP`, `File`,`SQLite`分别继承抽象类, 并在抽象方法实现自己的处理逻辑.  然后就可以创建一个`工厂类`, 工厂类有一个方法, **形参为产品实现类的字节码**, 返回一个**泛型上限限定是产品的抽象类**对象, 方法内部通过字节码反射具体的产品类实例. 
@@ -713,11 +695,9 @@ public class MainActivity extends Activity {
 这样在使用的使用, 我们只需有通过`工厂方法`传入的不同`产品Class`就可以构建不同的实例, 而数据的CRUD通过**依赖倒置**抽象特性, 高层不需要依赖底层的类.
 
 <span id = "23"></span>
-
 ### 抽象工厂模式 Abstract Factory
 
 <span id = "24"></span>
-
 #### 模式介绍
 
 > 创建型设计模式, 之前工厂模式会生产某一个产品, 但是如果说, 不同的操作系统图形的场景下的两个产品**按钮**和**文本框**. 对于每一个操作系统, 其本身就构成了一个单独的产品.  两种产品两种变化, 这种情况就较之前的普通工厂升级了复杂度, 如: `Android`中的`Button`和`TextView`, `iOS`中的`Button`和`TextView`或者`WindowPhone`场景...
@@ -726,7 +706,6 @@ public class MainActivity extends Activity {
 * `场景`: 一个对象族有相同的约束时可以使用**抽象工厂**, 如`android`和`iOS`都有打电话软件和短信软件, 两者都属于`软件的范畴`, 但是他们的操作平台不同, 实现逻辑也不会相同. 这个时候就可以使用`抽象工厂方法模式`
 
 <span id = "25"></span>
-
 #### 模式范例
 
 [实现代码](https://github.com/suzeyu1992/AlgorithmTraining/tree/master/src/design/absfactory)
@@ -746,7 +725,6 @@ public class MainActivity extends Activity {
 但是弊端也显示出来了, 不仅需要扩展新的`工厂类`还要扩展`新的组件类`. 
 
 <span id = "26"></span>
-
 #### Android源码对应实现
 
 抽象工厂在`Android`实现较少, 上一节说`onCreate()`方法就相当于一个工厂方法. 那么对于另外一个组件`Service#onBind()`同样也可以看做一个工厂方法. 
@@ -756,11 +734,9 @@ public class MainActivity extends Activity {
 另一个更像的例子是`Android`底层对`MediaPlayer`使用.  这里书上噼里啪啦一堆C语言. 我就不抄了.... 
 
 <span id = "27"></span>
-
 ### 策略模式 Strategy
 
 <span id = "28"></span>
-
 #### 模式介绍
 
 > 开发中可能有这样的情况: 实现某一个功能可以有多中算法或者策略, 我们根据不同的功能来选择不同的算法. 针对这种情况, 1.可以在一个类中封装多个方法, 每个方法实现不同算法. 2.通过`if..else if..else..`条件判断来决定使用哪种算法. 但是这两种都是`硬编码`实现. 并且随着算法的增多类也就变得臃肿, 维护的成本随之变高. 如果需要增加一种新的算法, 必然需要对算法类进行修改. 这就违反了`OCP`原则和`单一职责`的原则.
@@ -772,8 +748,7 @@ public class MainActivity extends Activity {
     * 需要安全地封装多种同一类型的操作时
     * 出现同一抽象类有多个子类, 而又不需要使用`if-else`或者`switch`等来选择具体子类. 
     
-    <span id = "29"></span>
-
+<span id = "29"></span>
 #### 模式范例
      
 最方便的记忆法就是记住, `策略模式`可以去掉`if-else`或者`switch`. 语句, 即使后续会扩展通过接口来进行扩展, 不会对源代码进行修改.  满足了`OCP开闭原则`.
@@ -810,8 +785,6 @@ public static void main (String arg[]){
 你应该可以发现, 这种方式在隐藏实现的同时, **可扩展性**变得很强, 如果此时需要增加一个出租车的计算策略, 那么只需要添加一个实现了`计算策略接口`即可. 对原始代码的修改进行了`关闭`, 并对扩展`开放`.
 
 <span id = "30"></span>
-
-
 #### Android源码对应实现
 
 动画里面的`插值器Interpolator`利用了策略模式, 利用`Interpolator`策略的抽象, `LinearInterpolator`,`CycleInterpolator`等插值器为具体的实现策略, 通过注入不同的插值器实现不同的动态效果.
@@ -960,7 +933,6 @@ public boolean getTransformation(long currentTime, Transformation outTransformat
 第3步调用了`applyTransformation`, 这个方法在基类`Animation`中是空实现, 可以在子类查看实现如`ScaleAnimation`,`AlphaAnimation`等查看.  当这个方法内部主要通过`矩阵`来实现动画.  当这个方法执行完毕之后, View的属性也就发生了变化, 不断地重复这个过程, 动画就随之产生. 
 
 <span id = "31"></span>
-
 #### 实战场景
 
 当我们自己组装了一个队列请求, 对于这个队列的处理方式默认可能是`先处理进入队列的`,  但是如果想实现一个可以`先处理后入队的`, 和`随机读取队列元素`. 那么为了以后的扩展不影响源代码, 那么可以通过`策略模式`在代码中通过对`策略抽象`面向接口,抽象编程.  是具体的实现有后续的传入的子类来决定.
