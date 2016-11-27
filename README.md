@@ -1,6 +1,7 @@
-> 有一个自己的知识库, 是一件多么酷的事
+> 有一个自己的知识库, 是一件多么酷的事啊
 
-                                
+<pre align="right">起始于2016年11月20日</br>嗨,去过配得上的生活,你可以更好</pre> 
+                     
 
 
 
@@ -12,7 +13,7 @@
         * [Android Studio 快捷键 mac版](http://szysky.com/2016/05/20/Android-Studio-%E5%BF%AB%E6%8D%B7%E9%94%AE-mac/)
         * [Retrofit(一)-入门使用](http://szysky.com/2016/07/18/Retrofit-%E4%B8%80-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/)
         * [Android绘图篇-01 Canvas和Paint的基础使用](http://szysky.com/2016/07/05/Android-%E7%BB%98%E5%9B%BE%E7%AF%87-1-Canvas%E5%92%8CPaint%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/)
-    * **`famework`**
+    * **`framework`**
 * **`Java`**
 * **`数据结构`**
 * **`设计模式`**
