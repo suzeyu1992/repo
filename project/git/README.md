@@ -37,7 +37,7 @@
 
 
 
-<span id = "#安装Git"></span>
+<span id = "安装Git"></span>
 ## 安装Git
 
 **Linux**

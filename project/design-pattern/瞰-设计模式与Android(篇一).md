@@ -42,7 +42,7 @@
         * [实战场景](#31) 
 
     
-    <span id ="#1"></span>
+    <span id ="1"></span>
     
 ## 灵活之路 - 面向对象六大原则
 
@@ -65,7 +65,7 @@
     * `定义`: 一个对象应该对其他对象有**最少**的了解. `通俗点`: 一个类应该对自己需要耦合或调用的类知道的最少, 类的内部如果实现与调用者或者依赖者没有关系, 调用者或者依赖者只需要知道他需要的方法即可, 其他一概不管.
     * `举例`: 房间类, 中介类, 上班族类.  可以**上班族**应该只关心**中介类**, 而不需要关注**房间类**. 只需要**中介类**返回房子的地址即可. 而不需要通过调用**中介类**返回一个**房间类** . 这也就是代码中需要注意的. 不要过度耦合, 要降低类之间的关系. 
 
-<span id = "#2"></span>
+<span id = "id = "2"></span>
 ## 启航之路 - UML类图说明
 
 > 对于许多类组成的庞大关系网, 最好的办法是通过图来表示出其关系. 可以直观的看出组合的元素, 元素直接是如何存在的, 元素与哪些元素直接存在着联系等. 表示出来的图就是`UML类图`.
@@ -96,22 +96,22 @@
 
 > 编程是门技术, 更加是一门艺术, 不能只满足代码结果运行正确就完事, 时常考虑如果让代码更加简练, 更加容易维护, 更易扩展和复用, 这样才可以真正提高. 
 
-<span id = "#3"></span>
+<span id = "3"></span>
 
 ## 发现之路 - 23种设计模式
 
-<span id = "#4"></span>
+<span id = "4"></span>
 
 ### 单例模式 Singleton
 
-<span id = "#5"></span>
+<span id = "5"></span>
 
 #### 模式介绍
 
 * `定义`: 确保某个类只有一个实例, 而且自行实例化并向整个系统提供这个实例.
 * `场景`: 确保一个类只会有一个对象实例, 避免产生多个对象消耗过多的资源, 或者某种类型的对象只应该有且只有一个. 如创建一个对象需要消耗的资源过多, 访问IO和数据库等资源时就可以考虑单例. 
 
-<span id = "#6"></span>
+<span id = "6"></span>
 
 #### 模式范例
 
@@ -141,7 +141,7 @@ private Object readResolve() throws ObjectStreamException(){
 
 这样在反序列化的时候就不是默认的重新生成一个新对象. 而对于枚举,并不存在这个问题. 因为即使反序列化它也不会重新生成新的实例.
 
-<span id = "#7"></span>
+<span id = "7"></span>
 
 #### Android源码对应模式
 
@@ -196,10 +196,10 @@ class ContextImpl extends Context {
 ```
 
 
-<span id = "#8"></span>
+<span id = "8"></span>
 
 ### 建造者模式 Builder
-<span id = "#9"></span>
+<span id = "9"></span>
 
 #### 模式介绍
 
@@ -210,7 +210,7 @@ class ContextImpl extends Context {
     1. 当初始化一个队形特别复杂, 参数特别多, 且有很多参数都具有默认值时. 
     2. 相同的方法, 不同的执行顺序, 产生不同的事件结果时
     3. 多个部件或零件, 都可以装配到一个对象中, 但是产生的运行结果又不相同.
-  <span id = "#10"></span>
+  <span id = "10"></span>
   
 #### 模式范例
    
@@ -224,7 +224,7 @@ class ContextImpl extends Context {
    
    可能你会觉得`唉? 怎么和我见过的Builder模式不一样呢?` ,这是因为`Director`这个角色经常会被忽略. 而直接使用一个`Builder`来进行对象的封装, 并且这个`Builder`通常为**链式调用**, 它的每个`setter`方法都会返回`this`自身, 比如我们常用的`AlertDialog`. 下节介绍.
    
-   <span id = "#11"></span>
+   <span id = "11"></span>
 
 #### Android源码模式实现
 
@@ -350,17 +350,17 @@ public void installContent() {
 
 可以看到`Android源码中的AlertDialog`并没有遵循`GOF设计模式`中经典的实现方式, 而是进行了变种, 但却使其使用更加的方便. 这里`AlertDialog.Builder`这个类同时扮演了范例中的`builder`,`具体实现builder`,`Director`的角色. 简化了`Builder`设计模式, 因为模块比较稳定不会存在变化, 根据具体场景简化模式, 正是体现了灵活运用设计模式的实例.
 
-<span id = "#12"></span>
+<span id = "12"></span>
 
 #### 实战场景
 
 就如`Picasso`,`Glide`等链式的调用, 你可以通过链式设置很多配置属性, 也可以仅调用两三此传入必要参数即可. 是的调用实现更加灵活. 
 
-<span id = "#13"></span>
+<span id = "13"></span>
 
 ### 原型模式 Prototype
 
-<span id = "#14"></span>
+<span id = "14"></span>
 
 #### 模式介绍
 
@@ -378,7 +378,7 @@ public void installContent() {
 
 ![](imgs/UML_Prototype.png)
 
-<span id = "#15"></span>
+<span id = "15"></span>
 
 #### 模式范例
 
@@ -462,7 +462,7 @@ protected WordDocument clone() {
 而`mText`虽然是对象, 但是因为是`String`类型, 属于安全类型, 由于final类,实例不可更改的特性. 如果对副本进行字符串的修改, 只不过是把原引用删除,重新指向了新的字符串.
 
 
-<span id = "#16"></span>
+<span id = "16"></span>
 
 #### Android源码对应实现
 
@@ -551,7 +551,7 @@ public Intent(Intent o) {
 
 
 
-<span id = "#17"></span>
+<span id = "17"></span>
 
 #### 实战场景
 
@@ -563,11 +563,11 @@ public Intent(Intent o) {
 
 `原型模式`是通过内存中二进制流的方式拷贝, 要比直接通过`new`一个对象性能更好, 特别是循环体内产生大量对象是.  但是注意, 因为是`二进制流的拷贝`, 所以构造函数是不会执行的. 这点要明确记牢.
 
-<span id = "#18"></span>
+<span id = "18"></span>
 
 ### 工厂方法模式 Factory
 
-<span id = "#19"></span>
+<span id = "19"></span>
 
 #### 模式介绍
 
@@ -578,7 +578,7 @@ public Intent(Intent o) {
 
 工厂方法模式完全符合设计模式原则, 降低了对象之间的耦合度, 而且, 工厂方法模式依赖于抽象的架构, 将实例化的任务交由了子类实现.
 
-<span id = "#20"></span>
+<span id = "20"></span>
 
 #### 模式范例
 
@@ -590,7 +590,7 @@ public Intent(Intent o) {
  
  其实这里, 可以去掉抽象的工厂类, 只需要一个工厂即可.  这样会更加简洁直观.
  
- <span id = "#21"></span>
+ <span id = "21"></span>
 
 #### Android源码对应实现
  
@@ -705,7 +705,7 @@ public class MainActivity extends Activity {
 ```
 通过`onCreate()`这个方法, 我们可以构建出任何样式的根布局, 如`LinearLayout`,`TextView`等等. 我们在不同的`Activity#onCreate()`方法将设置的布局通过`setContentView()`函数传递给`frameworks`并显示出来. 这不就是一个工厂模式的结构. 方法内部可以创建不同的对象, 产生不同的实例.
 
-<span id = "#22"></span>
+<span id = "22"></span>
 
 #### 实战场景
 
@@ -713,11 +713,11 @@ public class MainActivity extends Activity {
 
 这样在使用的使用, 我们只需有通过`工厂方法`传入的不同`产品Class`就可以构建不同的实例, 而数据的CRUD通过**依赖倒置**抽象特性, 高层不需要依赖底层的类.
 
-<span id = "#23"></span>
+<span id = "23"></span>
 
 ### 抽象工厂模式 Abstract Factory
 
-<span id = "#24"></span>
+<span id = "24"></span>
 
 #### 模式介绍
 
@@ -726,7 +726,7 @@ public class MainActivity extends Activity {
 * `定义`: 为创建一组相关或者是相互依赖的的对象提供一个接口, 而不需要指定他们的具体类
 * `场景`: 一个对象族有相同的约束时可以使用**抽象工厂**, 如`android`和`iOS`都有打电话软件和短信软件, 两者都属于`软件的范畴`, 但是他们的操作平台不同, 实现逻辑也不会相同. 这个时候就可以使用`抽象工厂方法模式`
 
-<span id = "#25"></span>
+<span id = "25"></span>
 
 #### 模式范例
 
@@ -746,7 +746,7 @@ public class MainActivity extends Activity {
 
 但是弊端也显示出来了, 不仅需要扩展新的`工厂类`还要扩展`新的组件类`. 
 
-<span id = "#26"></span>
+<span id = "26"></span>
 
 #### Android源码对应实现
 
@@ -756,11 +756,11 @@ public class MainActivity extends Activity {
 
 另一个更像的例子是`Android`底层对`MediaPlayer`使用.  这里书上噼里啪啦一堆C语言. 我就不抄了.... 
 
-<span id = "#27"></span>
+<span id = "27"></span>
 
 ### 策略模式 Strategy
 
-<span id = "#28"></span>
+<span id = "28"></span>
 
 #### 模式介绍
 
@@ -773,7 +773,7 @@ public class MainActivity extends Activity {
     * 需要安全地封装多种同一类型的操作时
     * 出现同一抽象类有多个子类, 而又不需要使用`if-else`或者`switch`等来选择具体子类. 
     
-    <span id = "#29"></span>
+    <span id = "29"></span>
 
 #### 模式范例
      
@@ -810,7 +810,7 @@ public static void main (String arg[]){
 
 你应该可以发现, 这种方式在隐藏实现的同时, **可扩展性**变得很强, 如果此时需要增加一个出租车的计算策略, 那么只需要添加一个实现了`计算策略接口`即可. 对原始代码的修改进行了`关闭`, 并对扩展`开放`.
 
-<span id = "#31"></span>
+<span id = "30"></span>
 
 
 #### Android源码对应实现
@@ -960,7 +960,7 @@ public boolean getTransformation(long currentTime, Transformation outTransformat
 
 第3步调用了`applyTransformation`, 这个方法在基类`Animation`中是空实现, 可以在子类查看实现如`ScaleAnimation`,`AlphaAnimation`等查看.  当这个方法内部主要通过`矩阵`来实现动画.  当这个方法执行完毕之后, View的属性也就发生了变化, 不断地重复这个过程, 动画就随之产生. 
 
-<span id = "#31"></span>
+<span id = "31"></span>
 
 #### 实战场景
 
