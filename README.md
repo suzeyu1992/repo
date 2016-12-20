@@ -19,7 +19,7 @@
 * **`Java`**
 * **`小技巧小姿势`**
     * [git命令小手册](https://github.com/suzeyu1992/repo/tree/master/project/git) 
-    * [Android Studio使用技巧](http://szysky.com/2016/12/17/Android-Studio-%E5%B8%B8%E7%94%A8%E6%89%8B%E5%86%8C/)
+    * [Android Studio高效使用](http://szysky.com/2016/12/17/Android-Studio-%E5%B8%B8%E7%94%A8%E6%89%8B%E5%86%8C/)
 * **`数据结构`**
 * **`设计模式`**
     * [面向对象的六大原则解析](http://szysky.com/2016/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99%E8%A7%A3%E6%9E%90/)
