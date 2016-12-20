@@ -17,7 +17,7 @@
         * [深入WindowManager](http://szysky.com/2016/11/28/%E6%B7%B1%E5%85%A5WindowManager/)
         * [认知WindowManagerService](http://szysky.com/2016/11/28/WindowManagerService/)   
 * **`Java`**
-* **`Git`**
+* **`小技巧小姿势`**
     * [git命令小手册](https://github.com/suzeyu1992/repo/tree/master/project/git) 
 * **`数据结构`**
 * **`设计模式`**
