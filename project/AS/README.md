@@ -1,8 +1,8 @@
 
-> 整理`Android群英传`和网上出现的比较完整`AS`的快捷小技巧. `mac`版已测, `win`部分测试. 最后有一个整理的完整`快捷键表格`. win也好mac也好, 如果快捷被修改还是错误, 都可以通过提供的`Keymap中的关键字`来进行重设. 
+> 整理`Android群英传`和网上出现的比较完整`AS`的快捷小技巧. `mac`版已测, `win`大部分已测试. 最后有一个整理的完整`快捷键表格`. win也好mac也好, 如果快捷被修改还是错误, 都可以通过提供的`Keymap中的关键字`来进行重设. 
 >  图中`gif`如果看不清, 放大页面即可. 
 
-* [作者GitHub](https://github.com/suzeyu1992/repo.git)
+O(∩_∩)O~~ 喜欢就撒个星. 转载表明出处[https://github.com/suzeyu1992/repo](https://github.com/suzeyu1992/repo) 
 
 
 * [常用小操作](#1)
