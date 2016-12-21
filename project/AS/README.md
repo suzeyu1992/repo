@@ -196,7 +196,7 @@ O(∩_∩)O~~ 喜欢就撒个星. 转载表明出处[https://github.com/suzeyu19
 
 创建一个对象. 或者`findViewById()`有时总需要移动鼠标或者光标到末尾进行`分号`的补全. 这些都可以快捷键搞定.  当你用习惯之后, 会非常的方便好用. 
 
-* `option + shift + enter`**(mac)**
+* `command + shift + enter`**(mac)**
 * `ctrl + shift + enter`**(win)**
 
 实现的功能 
