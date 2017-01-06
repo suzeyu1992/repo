@@ -24,6 +24,8 @@
     * [vim常用手册](http://szysky.com/2016/12/27/vim%E5%B8%B8%E7%94%A8%E7%AC%94%E8%AE%B0/)
 * **`数据结构`**
     * [算法的介绍](http://szysky.com/2017/01/01/%E8%AE%A4%E7%9F%A5%E7%AE%97%E6%B3%95/) 
+    * [结构之-线性表](http://szysky.com/2017/01/04/%E7%BA%BF%E6%80%A7%E8%A1%A8/)
+    * [结构之-栈和队列](http://szysky.com/2017/01/06/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/)
 * **`设计模式`**
     * [面向对象的六大原则解析](http://szysky.com/2016/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99%E8%A7%A3%E6%9E%90/)
     * [设计模式与Android(篇一)](https://github.com/suzeyu1992/repo/tree/master/project/design-pattern/%E7%9E%B0-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8EAndroid(%E7%AF%87%E4%B8%80))  
