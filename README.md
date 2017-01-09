@@ -15,7 +15,9 @@
         * [Android绘图篇-01 Canvas和Paint的基础使用](http://szysky.com/2016/07/05/Android-%E7%BB%98%E5%9B%BE%E7%AF%87-1-Canvas%E5%92%8CPaint%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/)
     * **`framework`**
         * [深入WindowManager](http://szysky.com/2016/11/28/%E6%B7%B1%E5%85%A5WindowManager/)
-        * [认知WindowManagerService](http://szysky.com/2016/11/28/WindowManagerService/)   
+        * [认知WindowManagerService](http://szysky.com/2016/11/28/WindowManagerService/) 
+        * [了解Binder是如何撑起Android系统运行](http://szysky.com/2017/02/08/%E9%9D%A2%E8%AF%95%E4%B9%8BBinder%E7%9A%84%E8%AE%A4%E7%9F%A5/)  
+        * [Android系统的启动简述](http://szysky.com/2017/02/09/Android%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/)
 * **`Java`**
 * **`小技巧小姿势`**
     * [git命令小手册](https://github.com/suzeyu1992/repo/tree/master/project/git) 
